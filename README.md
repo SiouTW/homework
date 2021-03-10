@@ -1,2 +1,5 @@
 # homework
  Calendar
+只做了週的RWD和月份顯示還有該看到的CSS部分
+
+RWD的尺寸只做了1200px，768px和手機尺寸的375px
