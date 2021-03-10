@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>week</title>
+  <link rel="stylesheet" href="./css/week.css">
+  <!-- google字體 Noto Sans TC -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500&display=swap" rel="stylesheet">
+  <!-- font-awesome -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css'
+    integrity='sha512-vZWT27aGmde93huNyIV/K7YsydxaafHLynlJa/4aPy28/R1a/IxewUH4MWo7As5I33hpQ7JS24kwqy/ciIFgvg=='
+    crossorigin='anonymous' />
+
+</head>
+
+<body>
+  <div id="index">
+    <!-- router 的部分 -->
+    <!-- <router-link to="/">calendar</router-link>
+    <router-link to="/month">calendar/month</router-link>
+    <router-link to="/week">calendar/week</router-link> -->
+    <!-- <p class='p'>預約行事曆</p> -->
+    <!-- <div>
+      <select v-model='mode' class='weekOrDaySelect'>
+        <option value="">周檢視</option>
+        <option value="day">日檢視</option>
+      </select>
+      <span>Selected: {{ mode }}</span>
+    </div> -->
+
+    <!-- 上半部 -->
+    <div class='topBar'>
+
+      <div class="topOne">
+        <h3 class='select'><i class="far fa-calendar"></i>選擇日期</h3>
+        <div class="delete"><i class="fas fa-times"></i></div>
+        <h4 class="yearsAndMonth">{{ currentYear }}</h4>
+      </div>
+
+      <!-- 日~六 -->
+      <ul>
+        <li v-for="dayoftheweek in weeks">{{ dayoftheweek }}</li>
+      </ul>
+    </div>
+
+    <!-- 月曆的部分 -->
+    <div class='calendar'>
+      <month :num='a-1' v-for='a in 12' :key='a'></month>
+    </div>
+
+  </div>
+
+
+
+</body>
+<!-- vue.js -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<!-- vue-router -->
+<script src=' https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.4.9/vue-router.js'></script>
+<!-- 月曆 -->
+<script type="text/javascript" src="./js/script.js"></script>
+<script>
+
+  // const Month = {
+  //   template: `
+  //     <div class='month'>
+  //       <p>月</p>
+  //     </div>
+  //     `,
+  // }
+
+  // const Week = {
+  //   template: `
+  //   <div class='week'>
+  //     <p>周</p>
+  //     </div>
+  //     `,
+  // }
+
+  // Vue.component('Month', {
+  //   template: `
+  //     <div class='month'>
+  //       <p>月</p>
+  //     </div>
+  //     `,
+  // })
+
+  // Vue.component('Week', {
+  //   template: `
+  //       <div class='week'>
+  //         <p>周</p>
+  //       </div>
+  //       `,
+  // })
+
+  // Vue.component('Day', {
+  //   template: `
+  //       <div class='day'>
+  //         <p>日</p>
+  //       </div>
+  //       `,
+  // })
+
+  // const router = new VueRouter({
+  //   routes: [
+  //     {
+  //       path: '/',
+  //       component: {
+  //         template: '<Month />',
+  //       }
+  //     },
+  //     {
+  //       path: '/month',
+  //       component: {
+  //         template: '<Month />',
+  //       }
+  //     },
+  //     {
+  //       path: '/week',
+  //       component: {
+  //         template: '<Week />',
+  //       }
+  //     },
+  //     {
+  //       path: '/day',
+  //       component: {
+  //         template: '<Day />',
+  //       }
+  //     },
+  //   ],
+  // })
+
+  // const vm = new Vue({
+  //   el: '#index',
+  //   // router,
+  //   data() {
+  //     return {
+  //       mode: 'week',
+  //       selected: '',
+  //     }
+  //   },
+  //   methods: {
+  //     // change_route() {
+  //     //   this.$router.push({ path: '/' + this.mode });
+  //     // },
+  //   },
+  //   mounted() {
+  //     // this.mode = 'month'
+  //   },
+  // })
+</script>
+
+</html>

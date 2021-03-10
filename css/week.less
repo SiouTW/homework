@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+// 上半部
+.topBar {
+  height: 150px;
+  margin: 0 auto;
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 768px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 375px;
+  }
+
+  .topOne {
+    height: 100px;
+    position: relative;
+
+    .select {
+      color: rgb(80, 80, 80);
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      font-weight: 300;
+
+      i {
+        background-color: #7f74b4;
+        color: white;
+        height: 20px;
+        width: 20px;
+        padding: 5px;
+        margin-right: 10px;
+        border-radius: 50%;
+        text-align: center;
+      }
+    }
+
+    .delete {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      line-height: 20px;
+
+      i {
+        cursor: pointer;
+        font-size: 20px;
+      }
+    }
+
+    .yearsAndMonth {
+      height: 25px;
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  }
+
+
+  ul {
+    height: 50px;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  li {
+    width: 14.2%;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+  }
+}
+
+// 月歷的部分
+.calendar {
+  position: fixed;
+  background-color: rgb(250, 250, 250);
+  // height: 517px;
+  // 667px-150px
+  width: 375px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  top: 150px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: scroll;
+  -webkit-box-shadow: 0 3px 3px 0 red inset;
+  -moz-box-shadow: 0 3px 3px 0 red inset;
+  box-shadow: 0 3px 3px 0 rgb(235, 235, 235) inset;
+  // border: 1px solid gray;
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 768px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 375px;
+  }
+
+  ul {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  li {
+    width: 14.2%;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+
+    &.now {
+      color: rgb(100, 100, 100);
+    }
+
+    &.notnow {
+      color: rgb(220, 220, 220);
+    }
+  }
+
+  .month {
+    padding-bottom: 20px;
+
+    p {
+      color: rgb(80, 80, 80);
+      text-align: center;
+      padding: 10px 0;
+    }
+  }
+}
+
+
+// 暫時沒用到
+.p {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  font-size: 20px;
+}
+
+.weekOrDaySelect {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 25px;
+}
+
+.container {
+  position: absolute;
+  display: flex;
+  width: 375px;
+  height: 567px;
+  bottom: 0px;
+  // 667-100
+  // border: 1px solid lightblue;
+
+  .childDiv {
+    flex: 1;
+    border: 1px solid gray;
+  }
+}

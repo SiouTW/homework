@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+.topBar {
+  height: 150px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1200px) {
+  .topBar {
+    width: 1200px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .topBar {
+    width: 768px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .topBar {
+    width: 375px;
+  }
+}
+.topBar .topOne {
+  height: 100px;
+  position: relative;
+}
+.topBar .topOne .select {
+  color: #505050;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-weight: 300;
+}
+.topBar .topOne .select i {
+  background-color: #7f74b4;
+  color: white;
+  height: 20px;
+  width: 20px;
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 50%;
+  text-align: center;
+}
+.topBar .topOne .delete {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 20px;
+}
+.topBar .topOne .delete i {
+  cursor: pointer;
+  font-size: 20px;
+}
+.topBar .topOne .yearsAndMonth {
+  height: 25px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.topBar ul {
+  height: 50px;
+  display: flex;
+  flex-flow: row wrap;
+}
+.topBar li {
+  width: 14.2%;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+}
+.calendar {
+  position: fixed;
+  background-color: #fafafa;
+  width: 375px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  top: 150px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: scroll;
+  -webkit-box-shadow: 0 3px 3px 0 red inset;
+  -moz-box-shadow: 0 3px 3px 0 red inset;
+  box-shadow: 0 3px 3px 0 #ebebeb inset;
+}
+@media screen and (min-width: 1200px) {
+  .calendar {
+    width: 1200px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .calendar {
+    width: 768px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .calendar {
+    width: 375px;
+  }
+}
+.calendar ul {
+  display: flex;
+  flex-flow: row wrap;
+}
+.calendar li {
+  width: 14.2%;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  cursor: pointer;
+}
+.calendar li.now {
+  color: #646464;
+}
+.calendar li.notnow {
+  color: #dcdcdc;
+}
+.calendar .month {
+  padding-bottom: 20px;
+}
+.calendar .month p {
+  color: #505050;
+  text-align: center;
+  padding: 10px 0;
+}
+.p {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  font-size: 20px;
+}
+.weekOrDaySelect {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 25px;
+}
+.container {
+  position: absolute;
+  display: flex;
+  width: 375px;
+  height: 567px;
+  bottom: 0px;
+}
+.container .childDiv {
+  flex: 1;
+  border: 1px solid gray;
+}
+/*# sourceMappingURL=./week.css.map */
